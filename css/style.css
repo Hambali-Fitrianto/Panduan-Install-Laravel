@@ -1,7 +1,8 @@
 /* Global Styling */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
 }
 
 /* Navbar Styling */
@@ -13,9 +14,9 @@ body {
     padding: 1rem 2rem;
     color: white;
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 1000; /* Navbar berada di atas */
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar .logo a {
@@ -105,9 +106,8 @@ body {
 
 /* Main Content Styling */
 main {
-    padding-top: 80px; /* Untuk memberi jarak pada konten agar tidak tertutup navbar */
-    min-height: 80vh; /* Agar konten selalu mengisi sebagian besar layar */
-    padding-bottom: 60px; /* Memberi ruang untuk footer */
+    padding-top: 80px; /* Memberikan jarak pada konten agar tidak tertutup navbar */
+    min-height: 80vh; /* Konten mengisi sebagian besar layar */
 }
 
 /* Footer Styling */
@@ -115,6 +115,16 @@ main {
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #007bff;
+    background-color: #343a40;
     color: white;
+}
+
+/* Styling untuk alert */
+.alert-info {
+    background-color: #17a2b8;
+    color: white;
+    font-size: 1.1rem;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
 }
