@@ -9,8 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <header id="navbar-placeholder"></header>
 
     <!-- Konten Halaman -->
     <main>
@@ -24,6 +22,81 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Langkah-langkah Installasi Laravel -->
+            <section class="installation-guide">
+                <h2>Langkah-Langkah Instalasi Laravel</h2>
+                <ol>
+                    <li>Install Composer dari <a href="https://getcomposer.org" target="_blank">getcomposer.org</a>.</li>
+                    <li>Buka terminal dan jalankan perintah berikut untuk membuat proyek Laravel baru:
+                        <pre><code>composer create-project laravel/laravel:^11.0 nama-proyek</code></pre>
+                    </li>
+                    <li>Masuk ke folder proyek:
+                        <pre><code>cd nama-proyek</code></pre>
+                    </li>
+                    <li>Jalankan server development Laravel:
+                        <pre><code>php artisan serve</code></pre>
+                    </li>
+                    <li>Buka browser dan akses <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>.</li>
+                </ol>
+            </section>
+
+            <!-- Migration -->
+            <section class="migration-guide mt-5">
+                <h2>Langkah-Langkah Migrasi</h2>
+                <ol>
+                    <li>Menyiapkan Migration untuk tabel baru di Laravel.</li>
+                    <li>Jalankan perintah berikut untuk membuat migration:
+                        <pre><code>php artisan make:migration create_tabel_name</code></pre>
+                    </li>
+                    <li>Jalankan perintah untuk menjalankan migration:
+                        <pre><code>php artisan migrate</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Controller -->
+            <section class="controller-guide mt-5">
+                <h2>Langkah-Langkah Membuat Controller</h2>
+                <ol>
+                    <li>Gunakan perintah berikut untuk membuat controller:
+                        <pre><code>php artisan make:controller ControllerName</code></pre>
+                    </li>
+                    <li>Controller akan disimpan dalam folder <code>app/Http/Controllers</code>.</li>
+                </ol>
+            </section>
+
+            <!-- Route -->
+            <section class="route-guide mt-5">
+                <h2>Langkah-Langkah Menambahkan Route</h2>
+                <ol>
+                    <li>Menambahkan route di <code>routes/web.php</code>:</li>
+                    <pre><code>Route::get('/contoh', [ControllerName::class, 'method']);</code></pre>
+                </ol>
+            </section>
+
+            <!-- Model -->
+            <section class="model-guide mt-5">
+                <h2>Langkah-Langkah Membuat Model</h2>
+                <ol>
+                    <li>Gunakan perintah berikut untuk membuat model:
+                        <pre><code>php artisan make:model ModelName</code></pre>
+                    </li>
+                    <li>Model akan disimpan dalam folder <code>app/Models</code>.</li>
+                </ol>
+            </section>
+
+            <!-- View -->
+            <section class="view-guide mt-5">
+                <h2>Langkah-Langkah Membuat View</h2>
+                <ol>
+                    <li>View dapat diletakkan dalam folder <code>resources/views</code>.</li>
+                    <li>Untuk menampilkan view, gunakan:
+                        <pre><code>return view('view_name');</code></pre>
+                    </li>
+                </ol>
+            </section>
+
         </div>
     </main>
 
