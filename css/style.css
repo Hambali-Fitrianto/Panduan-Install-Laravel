@@ -1,3 +1,9 @@
+/* Global Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 /* Navbar Styling */
 .navbar {
     display: flex;
@@ -6,6 +12,10 @@
     background-color: #007bff;
     padding: 1rem 2rem;
     color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Navbar berada di atas */
 }
 
 .navbar .logo a {
@@ -41,7 +51,6 @@
 .burger {
     display: none;
     cursor: pointer;
-    z-index: 1000; /* To ensure the burger icon stays on top */
 }
 
 .burger div {
@@ -54,12 +63,10 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Menampilkan burger icon pada layar kecil */
     .burger {
         display: block;
     }
 
-    /* Menyembunyikan nav-links pada layar kecil dan menampilkan saat active */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -74,7 +81,7 @@
     }
 
     .nav-links.active {
-        display: flex; /* Menampilkan menu saat active */
+        display: flex;
     }
 
     .nav-links li {
@@ -85,13 +92,29 @@
 
 /* Burger Animation */
 .burger.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px); /* Animasi untuk garis pertama */
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .burger.toggle .line2 {
-    opacity: 0; /* Menyembunyikan garis kedua */
+    opacity: 0;
 }
 
 .burger.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px); /* Animasi untuk garis ketiga */
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Main Content Styling */
+main {
+    padding-top: 80px; /* Untuk memberi jarak pada konten agar tidak tertutup navbar */
+    min-height: 80vh; /* Agar konten selalu mengisi sebagian besar layar */
+    padding-bottom: 60px; /* Memberi ruang untuk footer */
+}
+
+/* Footer Styling */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
 }
