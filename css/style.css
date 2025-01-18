@@ -41,6 +41,7 @@
 .burger {
     display: none;
     cursor: pointer;
+    z-index: 1000; /* To ensure the burger icon stays on top */
 }
 
 .burger div {
@@ -53,10 +54,12 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Menampilkan burger icon pada layar kecil */
     .burger {
         display: block;
     }
 
+    /* Menyembunyikan nav-links pada layar kecil dan menampilkan saat active */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -67,10 +70,11 @@
         width: 200px;
         padding: 1rem;
         border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Menampilkan menu saat active */
     }
 
     .nav-links li {
@@ -81,13 +85,13 @@
 
 /* Burger Animation */
 .burger.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px); /* Animasi untuk garis pertama */
 }
 
 .burger.toggle .line2 {
-    opacity: 0;
+    opacity: 0; /* Menyembunyikan garis kedua */
 }
 
 .burger.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px); /* Animasi untuk garis ketiga */
 }
