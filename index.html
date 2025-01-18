@@ -12,34 +12,53 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+
         .navbar {
             background-color: #343a40; /* Dark background */
         }
+
         .navbar-brand {
             font-weight: 700;
             font-size: 1.8rem;
             color: #fff !important;
         }
+
         .nav-link {
             color: #ddd !important;
             font-weight: 500;
         }
+
         .nav-link:hover {
             color: #f8f9fa !important;
             text-decoration: underline;
         }
+
         .navbar-nav .nav-item + .nav-item {
             margin-left: 20px;
         }
+
         .container {
             margin-top: 30px;
+            flex: 1;
         }
+
         footer {
             background-color: #343a40;
             color: #fff;
             padding: 20px;
             text-align: center;
+            margin-top: auto; /* Ensures the footer stays at the bottom */
+        }
+
+        /* Style for the "Mulai Belajar" button */
+        .btn-primary {
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            margin-top: 20px;
         }
     </style>
 </head>
