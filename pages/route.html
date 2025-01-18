@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="install.html">Install Laravel</a></li>
+                <li><a href="migration.html">Migration</a></li>
+                <li><a href="controller.html">Controller</a></li>
+                <li><a href="route.html">Route</a></li>
+                <li><a href="model.html">Model</a></li>
+                <li><a href="view.html">View</a></li>
+            </ul>
+        </nav>
+        <h1>Route</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Membuat Route</h2>
+            <ol>
+                <li>Buka file <code>routes/web.php</code>.</li>
+                <li>Tambahkan kode route sederhana seperti berikut:
+                    <pre><code>
+Route::get('/hello', function () {
+    return "Hello, Laravel!";
+});
+                    </code></pre>
+                </li>
+                <li>Simulasi dengan menjalankan server menggunakan <code>php artisan serve</code> dan akses <code>http://localhost:8000/hello</code>.</li>
+                <li>Route dapat diarahkan ke controller dengan cara berikut:
+                    <pre><code>
+Route::get('/welcome', [NamaController::class, 'index']);
+                    </code></pre>
+                </li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
