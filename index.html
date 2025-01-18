@@ -3,18 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panduan Laravel</title>
+    <title>Panduan Laravel - Ibal Bajay</title>
     <!-- Link ke CSS -->
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Styling untuk elemen kode yang dapat dicopy */
+        pre, code {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .alert-info {
+            background-color: #17a2b8;
+            color: white;
+            font-size: 1.1rem;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .section-title {
+            margin-top: 30px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Konten Halaman -->
     <main>
         <div class="container mt-5">
-            <h1 class="text-center mb-4">Selamat Datang di Panduan Laravel</h1>
-            <p class="lead text-center mb-4">Belajar Laravel dari instalasi hingga mahir.</p>
+            <h1 class="text-center mb-4">Selamat Datang di Panduan Laravel, Ibal Bajay</h1>
+            <p class="lead text-center mb-4">Panduan lengkap untuk belajar Laravel dari instalasi hingga mahir.</p>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="alert alert-info text-center">
@@ -22,17 +50,17 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Langkah-langkah Installasi Laravel -->
             <section class="installation-guide">
-                <h2>Langkah-Langkah Instalasi Laravel</h2>
+                <div class="section-title">Langkah-Langkah Instalasi Laravel</div>
                 <ol>
                     <li>Install Composer dari <a href="https://getcomposer.org" target="_blank">getcomposer.org</a>.</li>
                     <li>Buka terminal dan jalankan perintah berikut untuk membuat proyek Laravel baru:
-                        <pre><code>composer create-project laravel/laravel:^11.0 nama-proyek</code></pre>
+                        <pre><code>composer create-project laravel/laravel:^11.0 ibal-bajay-laravel</code></pre>
                     </li>
                     <li>Masuk ke folder proyek:
-                        <pre><code>cd nama-proyek</code></pre>
+                        <pre><code>cd ibal-bajay-laravel</code></pre>
                     </li>
                     <li>Jalankan server development Laravel:
                         <pre><code>php artisan serve</code></pre>
@@ -43,12 +71,10 @@
 
             <!-- Migration -->
             <section class="migration-guide mt-5">
-                <h2>Langkah-Langkah Migrasi</h2>
+                <div class="section-title">Langkah-Langkah Migrasi di Laravel</div>
                 <ol>
-                    <li>Menyiapkan Migration untuk tabel baru di Laravel.</li>
-                    <li>Jalankan perintah berikut untuk membuat migration:
-                        <pre><code>php artisan make:migration create_tabel_name</code></pre>
-                    </li>
+                    <li>Menyiapkan Migration untuk tabel baru di Laravel:</li>
+                    <pre><code>php artisan make:migration create_posts_table</code></pre>
                     <li>Jalankan perintah untuk menjalankan migration:
                         <pre><code>php artisan migrate</code></pre>
                     </li>
@@ -57,43 +83,100 @@
 
             <!-- Controller -->
             <section class="controller-guide mt-5">
-                <h2>Langkah-Langkah Membuat Controller</h2>
+                <div class="section-title">Langkah-Langkah Membuat Controller di Laravel</div>
                 <ol>
-                    <li>Gunakan perintah berikut untuk membuat controller:
-                        <pre><code>php artisan make:controller ControllerName</code></pre>
-                    </li>
+                    <li>Gunakan perintah berikut untuk membuat controller:</li>
+                    <pre><code>php artisan make:controller PostController</code></pre>
                     <li>Controller akan disimpan dalam folder <code>app/Http/Controllers</code>.</li>
+                    <li>Untuk menambahkan method di controller:
+                        <pre><code>public function index() {
+    return view('posts.index');
+}</code></pre>
+                    </li>
                 </ol>
             </section>
 
             <!-- Route -->
             <section class="route-guide mt-5">
-                <h2>Langkah-Langkah Menambahkan Route</h2>
+                <div class="section-title">Langkah-Langkah Menambahkan Route di Laravel</div>
                 <ol>
                     <li>Menambahkan route di <code>routes/web.php</code>:</li>
-                    <pre><code>Route::get('/contoh', [ControllerName::class, 'method']);</code></pre>
+                    <pre><code>Route::get('/posts', [PostController::class, 'index']);</code></pre>
+                    <li>Route dapat diarahkan ke controller atau langsung ke closure (fungsi anonim).</li>
                 </ol>
             </section>
 
             <!-- Model -->
             <section class="model-guide mt-5">
-                <h2>Langkah-Langkah Membuat Model</h2>
+                <div class="section-title">Langkah-Langkah Membuat Model di Laravel</div>
                 <ol>
-                    <li>Gunakan perintah berikut untuk membuat model:
-                        <pre><code>php artisan make:model ModelName</code></pre>
-                    </li>
+                    <li>Gunakan perintah berikut untuk membuat model:</li>
+                    <pre><code>php artisan make:model Post</code></pre>
                     <li>Model akan disimpan dalam folder <code>app/Models</code>.</li>
+                    <li>Model ini dapat digunakan untuk berinteraksi dengan tabel dalam database.</li>
                 </ol>
             </section>
 
             <!-- View -->
             <section class="view-guide mt-5">
-                <h2>Langkah-Langkah Membuat View</h2>
+                <div class="section-title">Langkah-Langkah Membuat View di Laravel</div>
                 <ol>
                     <li>View dapat diletakkan dalam folder <code>resources/views</code>.</li>
                     <li>Untuk menampilkan view, gunakan:
-                        <pre><code>return view('view_name');</code></pre>
+                        <pre><code>return view('posts.index');</code></pre>
                     </li>
+                    <li>Contoh: Untuk menampilkan view dengan nama <code>posts/index.blade.php</code>, gunakan:
+                        <pre><code>return view('posts.index');</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Blade Templating -->
+            <section class="blade-guide mt-5">
+                <div class="section-title">Pengenalan Blade Templating di Laravel</div>
+                <ol>
+                    <li>Blade adalah engine templating Laravel yang memungkinkan Anda membuat HTML yang dinamis.</li>
+                    <li>Contoh penggunaan Blade:
+                        <pre><code>@extends('layouts.app')</code></pre>
+                    </li>
+                    <li>Anda dapat membuat file Blade di folder <code>resources/views</code> dengan ekstensi <code>.blade.php</code>.</li>
+                </ol>
+            </section>
+
+            <!-- Eloquent ORM -->
+            <section class="eloquent-guide mt-5">
+                <div class="section-title">Pengenalan Eloquent ORM di Laravel</div>
+                <ol>
+                    <li>Eloquent adalah ORM Laravel yang memungkinkan Anda berinteraksi dengan database menggunakan model PHP.</li>
+                    <li>Contoh penggunaan Eloquent untuk mengambil semua data dari model:
+                        <pre><code>Post::all();</code></pre>
+                    </li>
+                    <li>Untuk menyimpan data ke dalam tabel, Anda bisa menggunakan:
+                        <pre><code>Post::create(['title' => 'Judul Post', 'content' => 'Konten Post']);</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Validation -->
+            <section class="validation-guide mt-5">
+                <div class="section-title">Validasi Data di Laravel</div>
+                <ol>
+                    <li>Validasi data dapat dilakukan di controller menggunakan <code>validate()</code> method:</li>
+                    <pre><code>$request->validate([
+                        'title' => 'required|string|max:255',
+                    ]);</code></pre>
+                    <li>Laravel menyediakan banyak aturan validasi seperti <code>required</code>, <code>email</code>, dan banyak lainnya.</li>
+                </ol>
+            </section>
+
+            <!-- Authentication -->
+            <section class="auth-guide mt-5">
+                <div class="section-title">Autentikasi Pengguna di Laravel</div>
+                <ol>
+                    <li>Untuk membuat autentikasi pengguna, gunakan perintah artisan berikut:
+                        <pre><code>php artisan make:auth</code></pre>
+                    </li>
+                    <li>Laravel menyediakan sistem autentikasi pengguna lengkap dengan login, registrasi, dan password reset.</li>
                 </ol>
             </section>
 
