@@ -1,5 +1,3 @@
-// script.js
-
 // Menyertakan navbar.html ke dalam halaman
 fetch('./navbar.html')
     .then(response => response.text())
