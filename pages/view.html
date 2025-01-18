@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="install.html">Install Laravel</a></li>
+                <li><a href="migration.html">Migration</a></li>
+                <li><a href="controller.html">Controller</a></li>
+                <li><a href="route.html">Route</a></li>
+                <li><a href="model.html">Model</a></li>
+                <li><a href="view.html">View</a></li>
+            </ul>
+        </nav>
+        <h1>View</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Membuat View</h2>
+            <ol>
+                <li>Buat file blade di folder <code>resources/views</code>, misalnya <code>resources/views/welcome.blade.php</code>.</li>
+                <li>Tambahkan konten HTML di file tersebut. Contoh:
+                    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Welcome&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Selamat Datang di Laravel&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </li>
+                <li>Hubungkan view ini dengan route:
+                    <pre><code>
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+                    </code></pre>
+                </li>
+                <li>Akses <code>http://localhost:8000/welcome</code> untuk melihat hasilnya.</li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
