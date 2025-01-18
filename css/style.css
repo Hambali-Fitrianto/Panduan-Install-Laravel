@@ -5,7 +5,7 @@ body {
     background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
-    height: 100vh;  /* Pastikan halaman memiliki tinggi 100% */
+    min-height: 100vh;  /* Pastikan halaman memiliki tinggi 100% */
 }
 
 /* Navbar Styling */
@@ -114,22 +114,13 @@ main {
 }
 
 /* Footer Styling */
-.footer {
+footer {
     background-color: #343a40; /* Warna navbar seragam dengan footer */
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: auto; /* Memastikan footer berada di bawah */
     width: 100%;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    color: #ffdd57;
+    margin-top: auto; /* Memastikan footer berada di bawah */
 }
 
 /* Styling untuk alert */
