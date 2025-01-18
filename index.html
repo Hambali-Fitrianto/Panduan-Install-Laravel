@@ -41,6 +41,14 @@
             right: 10px;
             z-index: 10;
         }
+        .btn-copy.success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-copy.success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
     </style>
 </head>
 <body>
@@ -248,7 +256,10 @@
             window.getSelection().addRange(range);
             try {
                 document.execCommand('copy');
-                alert('Kode berhasil disalin!');
+                button.classList.add('success');
+                setTimeout(() => {
+                    button.classList.remove('success');
+                }, 1000); // Reset tombol setelah 1 detik
             } catch (err) {
                 alert('Gagal menyalin kode.');
             }
