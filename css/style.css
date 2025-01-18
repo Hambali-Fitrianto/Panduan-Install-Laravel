@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #343a40; /* Warna navbar seragam dengan footer */
+    background-color: #343a40; /* Warna navbar */
     padding: 1rem 2rem;
     color: white;
     position: fixed;
@@ -74,7 +74,7 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #343a40; /* Warna navbar seragam dengan footer */
+        background-color: #343a40; /* Warna navbar */
         position: absolute;
         top: 60px;
         right: 20px;
@@ -111,16 +111,6 @@ body {
 main {
     padding-top: 80px; /* Memberikan jarak pada konten agar tidak tertutup navbar */
     flex: 1;  /* Membuat konten utama mengisi ruang yang tersedia */
-}
-
-/* Footer Styling */
-footer {
-    background-color: #343a40; /* Warna navbar seragam dengan footer */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    width: 100%;
-    margin-top: auto; /* Memastikan footer berada di bawah */
 }
 
 /* Styling untuk alert */
