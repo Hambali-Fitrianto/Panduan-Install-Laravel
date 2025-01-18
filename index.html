@@ -4,42 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panduan Laravel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link ke CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <header id="navbar-placeholder"></header>
 
-    <!-- Navbar (Diambil dari navbar.html dengan JavaScript) -->
-    <div id="navbar-placeholder"></div>
-
-    <!-- Main Content -->
+    <!-- Konten Halaman -->
     <main>
         <div class="container mt-5">
             <h1>Selamat Datang di Panduan Laravel</h1>
-            <p>Belajar Laravel dari instalasi hingga mahir. Mari mulai perjalanan Anda dengan framework PHP terbaik ini!</p>
-            <a href="./pages/install.html" class="btn btn-primary btn-lg">Mulai Belajar</a>
+            <p>Belajar Laravel dari instalasi hingga mahir.</p>
         </div>
     </main>
 
-    <!-- Footer (Diambil dari footer.html dengan JavaScript) -->
-    <div id="footer-placeholder"></div>
+    <!-- Footer -->
+    <footer id="footer-placeholder"></footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JavaScript untuk Memasukkan Navbar dan Footer -->
-    <script>
-        // Menyertakan navbar.html ke dalam halaman
-        fetch('./navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            });
-
-        // Menyertakan footer.html ke dalam halaman
-        fetch('./footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
-    </script>
+    <!-- Script JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>
